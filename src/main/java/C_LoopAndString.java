@@ -17,20 +17,21 @@ public class C_LoopAndString {
     /**
      * <p>Implement Caesar cipher encryption algorithm (tag: cryptography)
      * Google it for more information</p>
-     * <p>Ignore space: <b>"ab c" shift=3 => "de f"</b></p>
+     * <p>Only encrypt alphabetical characters:
+     * <b>"ab c" shift=3 => "de f"</b></p>
      *
      * @param s text
-     * @param c shift amount
+     * @param offset shift amount
      */
-    public static String caesarEncrypt(String s, int c) {
+    public static String caesarEncrypt(String s, int offset) {
         return null;
     }
 
     /**
      * <p>Implement Caesar cipher decryption algorithm (tag: cryptography)</p>
-     * Google it for more information</p>
+     * Google it for more information.</p>
      * <p>Ignore space: <b>"de f" shift=3 => "ab c"</b></p>
-     * <p>Use <code>{@code caesarEncrypt}</code></p>
+     * <p>You can use encryption method here.</p>
      *
      * @param s text
      * @param c shift amount

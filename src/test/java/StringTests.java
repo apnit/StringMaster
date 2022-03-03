@@ -18,7 +18,7 @@ public class StringTests {
 
     @Test
     public void fullName_test() {
-        assertEquals("Walt Whiter", B_StringMethods.fullName(
+        assertEquals("Walter White", B_StringMethods.fullName(
                 "Walter",
                 "White"
         ));
@@ -42,15 +42,27 @@ public class StringTests {
                 2
         ));
 
-        assertFalse(B_StringMethods.certainNumberOfChar(
+        assertTrue(B_StringMethods.certainNumberOfChar(
                 "java",
                 't',
                 0
         ));
 
-        assertFalse(B_StringMethods.certainNumberOfChar(
+        assertTrue(B_StringMethods.certainNumberOfChar(
                 "\0\t\b\r",
                 '\0',
+                1
+        ));
+
+        assertFalse(B_StringMethods.certainNumberOfChar(
+                "java",
+                'j',
+                2
+        ));
+
+        assertFalse(B_StringMethods.certainNumberOfChar(
+                "java",
+                't',
                 1
         ));
     }
@@ -85,7 +97,12 @@ public class StringTests {
         assertEquals(code, C_LoopAndString.caesarEncrypt(text, 13));
         assertEquals(code, C_LoopAndString.caesarEncrypt(text, 39));
         assertEquals(code, C_LoopAndString.caesarEncrypt(text, -13));
-        assertEquals("az", C_LoopAndString.caesarEncrypt("zy", -1));
+        assertEquals("yx", C_LoopAndString.caesarEncrypt("zy", -1));
+
+        assertEquals(text, C_LoopAndString.caesarDecrypt(code, 13));
+        assertEquals(text, C_LoopAndString.caesarEncrypt(code, 39));
+        assertEquals(text, C_LoopAndString.caesarEncrypt(code, -13));
+        assertEquals("zy", C_LoopAndString.caesarDecrypt("yx", -1));
     }
 
     /*
