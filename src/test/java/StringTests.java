@@ -100,8 +100,8 @@ public class StringTests {
         assertEquals("yx", C_LoopAndString.caesarEncrypt("zy", -1));
 
         assertEquals(text, C_LoopAndString.caesarDecrypt(code, 13));
-        assertEquals(text, C_LoopAndString.caesarEncrypt(code, 39));
-        assertEquals(text, C_LoopAndString.caesarEncrypt(code, -13));
+        assertEquals(text, C_LoopAndString.caesarDecrypt(code, 39));
+        assertEquals(text, C_LoopAndString.caesarDecrypt(code, -13));
         assertEquals("zy", C_LoopAndString.caesarDecrypt("yx", -1));
     }
 
